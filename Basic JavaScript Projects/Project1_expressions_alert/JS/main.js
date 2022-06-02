@@ -23,3 +23,8 @@ var family = "Jayson Lane", Dad = "Brice", Mom = "Delia", Grandson = "Tatum";
 document.write (Dad); //created multiple values for this variable and displayed one
 
 document.write(3+3); //this is a statement and expression that will display the result of the expression
+
+function My_First_Function() {
+    var str ="Testing";
+    document.getElementById("hoverover").innerHTML = str;
+}
