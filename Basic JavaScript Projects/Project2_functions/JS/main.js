@@ -9,3 +9,11 @@ function myFunction() {
     document.getElementById("concatenate").innerHTML = sentence;
 } //this function displays untilize concanate and displays these 2 sentences together
 
+function fullName(firstname, lastname) {
+    document.write(firstname + lastname);
+    getElementById("wholename").innerHTML = console;
+}
+
+var firstname = "Nubia"
+var lastname = "Brice"
+fullName("Nubia", "Brice");
