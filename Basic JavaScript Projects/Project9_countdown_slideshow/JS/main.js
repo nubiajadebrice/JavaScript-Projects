@@ -1,0 +1,48 @@
+function countdown() {
+    var seconds = document.getElementById("seconds").value;
+
+    function tick() {
+        seconds = seconds - 1;
+        TimeRanges.innerHTML = seconds;
+        var time = setTimeout(tick, 1000);
+        if (seconds == -1) {
+            alert("Time's up!");
+            clearTimeout(time);
+            timer.innerHTML = "";
+        }
+    }
+    tick();
+} //this creates a countdown timer that will display an alert after
+
+//BELOW IS THE SLIDESHOW
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+//next and prev controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+//thumgnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n< 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i <dots.length; i++) {
+        dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].classname += " active";
+}
+
+
