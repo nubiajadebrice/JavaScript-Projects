@@ -64,9 +64,3 @@ console.log (16 > 21);
 
 
 
-function my_func_ex {
-    var Q = 5;
-    var P = 7;
-    return (Q + P);
-} //intentionally written wrong - missing () - to then check in console log.
-//^ the presence of this code messes up almost the entire page
