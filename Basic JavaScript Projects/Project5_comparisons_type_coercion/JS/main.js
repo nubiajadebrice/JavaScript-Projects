@@ -33,7 +33,7 @@ document.write(D === C); //false, dif data type and dif value
 document.write(21 > 16 && 16 > 7); //AND op - true cuz both are true
 document.write(21 > 16 || 16 > 21); //OR op - true cuz one is true
 
-function not_func() {
+function notfunc1() {
     document.getElementById("notnot").innerHTML = !(21>16);
 } //**not op would display false bc this is true**
 
@@ -47,5 +47,5 @@ document.getElementById("Test3").innerHTML = isNaN('string');
 //**trying to determine if this is a number.**
 
 
-document.getElementById("Test3").innerHTML = isNaN('21');
+document.getElementById("Test4").innerHTML = isNaN('21');
 //**trying to determine if this is a number.**
