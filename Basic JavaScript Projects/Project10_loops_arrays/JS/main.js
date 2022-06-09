@@ -77,8 +77,3 @@ for (let i = 0; 1 < 3; i++) {
 } //continue jumps over this part of the loop
 
 
-function ret_func() {
-    var X = 16
-    var Y = 21
-return X+Y;
-} //returns x + y 
