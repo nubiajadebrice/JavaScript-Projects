@@ -64,14 +64,16 @@ document.write(N);
 document.write("<br>" + N)
 //uses let keyword and block scope. output = 16 21 16
 
-for (let i = 0; i<16; i++) {
-    if (i === 7) { break; }
-    text += "the number is " + i + "<br>";
+let text = "";
+for (let i = 0; i< 3; i++) {
+    if (i === 2) { break; }
+    document.write("the number is " + i + "<br>");
 } //break exits the loop
 
-for (let i = 0; 1 <16; i++) {
-    if (i === 7) { continue;}
-    text += "The number is " + i + "<br>";
+let text1 = "";
+for (let i = 0; 1 < 3; i++) {
+    if (i === 2) { continue;}
+    text1 += "The number is " + i + "<br>";
 } //continue jumps over this part of the loop
 
 
