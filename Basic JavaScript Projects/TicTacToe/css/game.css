@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+.center-container {
+    width: 608px;
+    margin: 0 auto; /*centers the cont*/
+    margin-top: 50px; /*50px down from top*/
+} /*this cont is our table and canvas*/
+
+table {
+    border-collapse: collapse; /*collapses table borders into 1*/
+    border-style: hidden;
+}
+
+td {
+    cursor: pointer;
+    border: 4px solid rgba(252, 239, 3, 0.8);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+canvas {
+    position: absolute; /*sets post. at top left corner of cont.*/
+    z-index: 10; /*places canvas at the top of table*/
+    pointer-events: none; /*makes canvas invisible*/
+}
