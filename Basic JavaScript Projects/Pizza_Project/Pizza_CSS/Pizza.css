@@ -47,6 +47,13 @@ div {
     float: right;
 }
 
+.veg {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+
 #showText {
     width: 2oopx;
     height: 190px;
