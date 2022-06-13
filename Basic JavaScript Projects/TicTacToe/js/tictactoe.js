@@ -143,8 +143,8 @@ function audio(audioURL) {
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     const canvas = document.getElementById('win-lines')
     const c = canvas.getContext('2d');
-    let xl = coordX1,
-        yl = coordY1,
+    let x1 = coordX1,
+        y1 = coordY1,
         x2 = coordX2,
         y2 = coordY2,
         x = x1,
