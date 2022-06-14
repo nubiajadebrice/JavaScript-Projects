@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+            <div class="content" id="testcontent"> 
+                <input type="button" class="button" value="New content" id="statechangebtn" onclick="changeContent();"/>
+            </div>
+        <script type="text/javascript">
+			
+        //1. setup the xml http request object
+            var ajax  = new XMLHttpRequest();
+
+        //2. prepare the open ajax request (what is it going to do)
+            ajax.open('GET', 'content.html');
+
+        //3.define the ajax response callback method (what to get and how)
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4) {
+                    document.getElementById('content').innerHTML = ajax.responseText;
+                }
+            }
+
+        //4.send the ajax request for data
+            function getContent() {
+                ajax.send();
+                document.getElementById('btn_content').style.display = 'none';
+            }
+
+
+
+        //challenge attempt
+        var test = new XMLHttpRequest();
+            test.open('GET', 'statechangecontent.html');
+            test.onreadystatechange = function (){
+                if (test.readyState == 5) {
+                    document.getElementById('testcontent').innerHTML = ajax.responseText;
+                }
+            }
+            function changeContent (){
+                test.send();
+                document.getElementById('statechangebtn').style.display = 'none';
+            }
+
+		</script>
+    </body>
+</html>
