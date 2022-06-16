@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="XML_Example"></p>
+<script>
+    var XML_Parser, XML_Documnent;
+
+    //creates a text string
+    var Anime = "<anime>" + 
+        "<title>Attack on Titan</title>" +
+        "<Studio>MAPPA</studio>" +
+        "<main>Eren Jaeger</main>" +
+        "<year>2013</year>" +
+        "</movie>";
+
+    //creates an XML DOM parser
+    XML_Parser = new DOMParser();
+
+    //creates a new XML DOM object using the text string
+    XML_Documnent = XML_Parser.parseFromString(Anime, "text/html");
+
+    document.getElementById("XML_Example").innerHTML = 
+    XML_Documnent.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        
+
+
+        </script>
+
+    </body>
+</html>

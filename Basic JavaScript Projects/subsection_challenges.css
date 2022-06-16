@@ -1,0 +1,134 @@
+/*fade challenge*/
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/*popup form challlenge*/
+{box sizing:border-box}
+
+.btn_open {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: .8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+} /*btn used to open form - fixed at btm pg*/
+
+.form_popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+} /*popup form hidden by default*/
+
+.form_container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+} /*add style to form cont*/
+
+.form_container input[type=text], .form_container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+} /*full width input fields*/
+
+.form_container input[type=text]:focus, .form_container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+} /*when the input get focus, do something*/
+
+.form_container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: .8;
+} /*style for submit/login button*/
+
+.form_container .cancel {
+    background-color: red;
+} /*add red color to cancel btn*/
+
+.form_container .btn:hover, .open:hover {
+    opacity: 1;
+} /*adds hover effect to btns*/
+
+/*ANIMATION CHALLENGE*/
+.animation {
+    color: greenyellow;
+    position: relative;
+    animation: anichallenge 5s infinite;
+}
+
+@keyframes anichallenge {
+    from {top:0px;}
+    to {top: 200px;}
+}
+
+/*ZOOM CHALLENGE*/
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+.zoom img {
+    animation: zoominoutsinglefeatured 15s forwards;
+}
+
+/*BOOKMARK CHALLANGE*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*SLIDESHOW CHALLENGE*/
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+  }
+  
+  #slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+  }
+
+  /*STICKY CHALLENGE*/
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+  }
